@@ -1,8 +1,10 @@
+from django.http import Http404
 from rest_framework import status, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Post
 from .serializers import PostSerializer
+from drf_api_micah.permissions import IsOwnerOrReadOnly
 
 
 class PostList(APIView):
@@ -33,7 +35,7 @@ class PostList(APIView):
 
 class PostDetail(APIView):
     serializer_class = PostSerializer
-    permission_classes =[permissions.IsAuthenticatedOrReadOnly]
+    permission_classes =[IsOwnerOrReadOnly]
     def get_object(self, pk):
         try:
             post = Post.objects.get(pk=pk)
@@ -44,12 +46,16 @@ class PostDetail(APIView):
     
     def get(self, request, pk):
         post = self.get_object(pk)
-        serializer = PostSerializer(post, context= {'request' : request})
+        serializer = PostSerializer(
+            post, context= {'request' : request}
+            )
         return Response(serializer.data)
 
     def put(self, request, pk):
         post = self.get_object(pk)
-        serializer = PostSerializer(post, data=request.data, context= {'request' : request})
+        serializer = PostSerializer(
+            post, data=request.data, context={'request' : request}
+            )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
