@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+
 if os.path.exists('env.py'):
     import env
 
@@ -35,7 +36,7 @@ SECRET_KEY = 'django-insecure-)$z0=6&k9&fqy2of&(=q2cbjv-d15o9yd62f+$ik(^7q!^+b$9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io']
+ALLOWED_HOSTS = ['localhost', '8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io']
 
 
 # Application definition
