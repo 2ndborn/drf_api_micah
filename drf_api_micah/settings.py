@@ -39,7 +39,10 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['drf-api-micah-e80ca46d29e2.herokuapp.com', 'localhost', '8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io']
+CSRF_TRUSTED_ORIGINS = [
+    'https://drf-api-micah-e80ca46d29e2.herokuapp.com',
+    'https://8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io'
+]
 
 
 # Application definition
