@@ -37,10 +37,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['drf-api-micah-e80ca46d29e2.herokuapp.com', 'localhost', '8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io']
+ALLOWED_HOSTS = ['drf-api-micah-ad42675b3e01.herokuapp.com', 'localhost', '8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://drf-api-micah-e80ca46d29e2.herokuapp.com',
+    'https://drf-api-micah-ad42675b3e01.herokuapp.com',
     'https://8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io'
 ]
 
