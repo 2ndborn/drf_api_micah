@@ -1,2 +1,3 @@
-release: python3 manage.py makemigrations && python3 manage.py migrate
-web: gunicorn drf_api_micah.wsgi:application
+release: python manage.py makemigrations && python manage.py migrate
+
+web: gunicorn drf_api_micah.wsgi
