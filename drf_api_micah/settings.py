@@ -37,9 +37,14 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['drf-api-micah.herokuapp.com', 'localhost', '8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io']
+ALLOWED_HOSTS = [
+    'drf-api-micah.herokuapp.com',
+     'localhost', 
+     '8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io'
+     ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io']
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io']
 
 
 # Application definition
@@ -110,11 +115,13 @@ MIDDLEWARE = [
 
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
-        os.environ.get('CLIENT_ORIGIN')
+        os.environ.get('CLIENT_ORIGIN'),
+        'https://raptor-select-brightly.ngrok-free.app'
     ]
 else:
     CORS_ALLOWED_ORIGIN_REGEXES = [
         r"^https://.*\.gitpod\.io$",
+        'https://raptor-select-brightly.ngrok-free.app'
     ]
 
 JWT_AUTH_COOKIE = 'my-app-auth'
