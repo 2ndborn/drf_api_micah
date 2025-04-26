@@ -117,6 +117,7 @@ if 'CLIENT_ORIGIN' in os.environ:
 else:
     CORS_ALLOWED_ORIGIN_REGEXES = [
         r"^https://.*\.gitpod\.io$",
+        r"^https://.*\.ngrok-free\.app$",
     ]
 
 if 'CLIENT_ORIGIN_DEV' in os.environ:
