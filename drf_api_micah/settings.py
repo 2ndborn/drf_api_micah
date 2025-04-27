@@ -36,12 +36,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEV' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'), 
     'localhost', 
-    '8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io'
+    '8000-2ndborn-drfapimicah-vvwpxsnk9wy.ws-eu118.gitpod.io',
+    'drf-api-micah-ad42675b3e01.herokuapp.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
